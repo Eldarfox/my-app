@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import MainPage from "./pages/mainPage/MainPage";
+import AboutPage from "./pages/aboutPage/AboutPage";
+import ContactsPage from "./pages/contactsPage/ContactsPage";
+import CounterPage from "./pages/counterPage/CounterPage";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            {/*<MainPage />*/}
+            {/*/!*<AboutPage/>*!/*/}
+            {/*<ContactsPage/>*/}
+            <CounterPage/>
+        </div>
+    );
 }
 
 export default App;
+
