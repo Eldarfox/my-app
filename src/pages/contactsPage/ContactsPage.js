@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 
 const ContactsPage = () => {
-    const title = useSelector(state => state.contactsTitle)
+    const title = useSelector(state => state.titleReducer.contactsTitle)
     const dispatch = useDispatch()
     const [input , setInput] = useState('')
     const withParams = () => {

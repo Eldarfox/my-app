@@ -2,7 +2,7 @@ import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 
 const CounterPage = () => {
-    const count = useSelector(state => state.count)
+    const count = useSelector(state => state.titleReducer.count)
     const dispatch = useDispatch()
     const plusOne = () => {
         dispatch({

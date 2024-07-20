@@ -2,11 +2,11 @@ import React from 'react';
 import {useSelector, useDispatch} from "react-redux";
 
 const MainPage = () => {
-    const mainTitle = useSelector(state => state.title)
-    const dispach = useDispatch()
+    const mainTitle = useSelector(state => state.titleReducer.title)
+    const dispatch = useDispatch()
 
     const changeTitle = () => {
-        dispach({
+        dispatch({
             type: 'CHANGE_TITLE'
         })
     }
