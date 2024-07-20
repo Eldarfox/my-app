@@ -8,13 +8,19 @@ const UsersPage = () => {
     const dispatch = useDispatch()
     console.log(users)
     return (
-        <div style={{backgroundColor: "gray", height: "100vh"}}>
-            <button onClick={()=> dispatch(fetchUsersAction())} style={{padding: "15px",marginTop:"20px", borderRadius:"10px"}}>get users</button>
-            <div style={{display: "flex" , flexWrap: "wrap"}}>
-                {users.map(user => <UserCard userInfo={user}/> )}
+        <div style={{ backgroundColor: "gray", height: "100vh" }}>
+            <button
+                onClick={() => dispatch(fetchUsersAction())}
+                style={{ padding: "15px", marginTop: "20px", borderRadius: "10px" }}
+            >
+                Get Users
+            </button>
+            <div style={{ display: "flex", flexWrap: "wrap" }}>
+                {users.map(user => <UserCard key={user.id} userInfo={user} />)}
             </div>
         </div>
     );
 };
+
 
 export default UsersPage;
